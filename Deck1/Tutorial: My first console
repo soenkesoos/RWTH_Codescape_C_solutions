@@ -1,0 +1,29 @@
+#include "codescape.h"
+#include "stdio.h"
+void run() {
+    executeArr("mmlirmlormm");
+    char password[];
+    
+    for (int i = 0; moves[i] != '\0'; i++) {
+        
+        switch (moves[i]) {
+            case 'm':
+                move();
+                break;
+            case 'l':
+                turnLeft();
+                break;
+            case 'r':
+                turnRight();
+                break;
+            case 'p':
+                pickUp();
+                break;
+            case 'o':
+                write(password);
+                break;
+            case 'i':
+                read(password);
+        }
+    }
+}
