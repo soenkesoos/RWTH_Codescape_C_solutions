@@ -1,0 +1,27 @@
+#include "codescape.h"
+#include "stdio.h"
+
+void run() {
+
+    char moves[] = "mmlcrmm";
+
+    for (int i = 0; moves[i] != '\0'; i++) {
+        
+        switch (moves[i]) {
+            case 'm':
+                move();
+                break;
+            case 'l':
+                turnLeft();
+                break;
+            case 'r':
+                turnRight();
+                break;
+            case 'p':
+                pickUp();
+                break;
+            case 'c':
+                write("activate");
+        }
+    }
+}
