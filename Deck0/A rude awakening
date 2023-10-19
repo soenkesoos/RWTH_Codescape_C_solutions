@@ -4,16 +4,16 @@ void run() {
 	char moves[] = "mmmmmmmpllmmmmrmmmm";
 	
     for (int i = 0; moves[i] != '\0'; i++) {
-        
+        int turn = 1;
         switch (moves[i]) {
             case 'm':
                 move();
                 break;
             case 'l':
-                turnLeft();
-                break;
+                turn=3;
             case 'r':
-                turnRight();
+                for (int c = 0; c < turn;c++)
+                    turnRight();
                 break;
             case 'p':
                 pickUp();
